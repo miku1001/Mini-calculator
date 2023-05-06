@@ -11,6 +11,7 @@ print ("=" * 90)
 
 def calculator():
     while True:
+        try:
 # Ask the user for operation
             mode = int(input("Enter Operation: ")) 
             # Press 1 for addition
@@ -91,17 +92,28 @@ def calculator():
             else:
                 print("Invalid choice")
                 continue
-# start
-calculator()
-
+        except ValueError:
+                print("ERROR!, you entered invalid character!")
+                continue
+        
 # Ask the user to continue or stop the program
 def choice():
     while True:
         choose = input("Type \033[32mY\033[0m if yes or \033[31mN\033[0m if no: ")
-    # If n
-    # Stop the program
-# if y
-    # Back to the first part
+        # If n
+        if choose.lower() == 'n':
+            # Stop the program
+            print("Closing Program. Thank you!")
+            quit()
+        # If y
+        elif choose.lower() == 'y':
+            # Back to the first part
+            calculator()
+        # If invalid character
+        else:
+            print("Invalid character!")
+            continue
 
-
-
+# start
+calculator()
+choice()
