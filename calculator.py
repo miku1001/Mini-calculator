@@ -42,7 +42,7 @@ def calculator():
                         difference = first - second
                         # print result
                         print(f'The difference is {difference}')
-                    # If user input 0 in second number
+                    # If user input non-integer character
                     except ValueError:
                         print("ERROR!, you entered invalid character!")
                         continue
@@ -59,7 +59,7 @@ def calculator():
                         product = first * second
                         # print result
                         print(f'The product is {product}')
-                    # If user input 0 in second number
+                    # If user non-integer character
                     except ValueError:
                         print("ERROR!, you entered invalid character!")
                         continue
@@ -79,6 +79,10 @@ def calculator():
                     # If user input 0 in second number
                     except ZeroDivisionError:
                         print("ERROR! Divided by zero")
+                        continue
+                    # If user non-integer character
+                    except ValueError:
+                        print("ERROR!, you entered invalid character!")
                         continue
             else:
                 print("Invalid choice")
