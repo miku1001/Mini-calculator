@@ -11,31 +11,78 @@ print ("=" * 90)
 
 def calculator():
     while True:
-        try:
 # Ask the user for operation
-            mode = int(input("Enter Operation: "))
+            mode = int(input("Enter Operation: ")) 
+            # Press 1 for addition
+            if mode == 1:
+                print("You choose, ADDITION!".center(45))
+                while True:
+                    try:
+                        # Enter number
+                        first = int(input("Enter the first number: "))
+                        # Enter second number
+                        second = int(input("Enter the second number: "))
+                        sum = first + second
+                        # print result
+                        print(f'The sum is {sum}')
+                    # If user input non-integer character
+                    except ValueError:
+                        print("ERROR!, you entered invalid character!")
+                        continue
+                    
+            # Press 2 for subtraction
+            elif mode == 2:
+                print("You choose, SUBTRACTION!".center(45))
+                while True:
+                    try:
+                        # Enter number
+                        first = int(input("Enter the first number: "))
+                        # Enter second number
+                        second = int(input("Enter the second number: "))
+                        difference = first - second
+                        # print result
+                        print(f'The difference is {difference}')
+                    # If user input 0 in second number
+                    except ValueError:
+                        print("ERROR!, you entered invalid character!")
+                        continue
 
-        # Present
-        except ValueError:
-            print("ERROR! The number that you input is invalid")
-            print()
-# Press 1 for addition
-    # Enter number
-    # Enter second number
-    # print result
-# Press 2 for subtraction
-    # Enter number
-    # Enter second number
-    # print result
-# Press 3 for multiplication
-    # Enter number
-    # Enter second number
-    # print result
-# Press 4 for divison
-    # Enter number
-    # Enter second number
-    # print result
-    # If user input 0 in second number
+            # Press 3 for multiplication
+            elif mode == 3:
+                print("You choose, MULTIPLICATION!".center(45))
+                while True:
+                    try:
+                # Enter number
+                        first = int(input("Enter the first number: "))
+                        # Enter second number
+                        second = int(input("Enter the second number: "))
+                        product = first * second
+                        # print result
+                        print(f'The product is {product}')
+                    # If user input 0 in second number
+                    except ValueError:
+                        print("ERROR!, you entered invalid character!")
+                        continue
+
+            # Press 4 for divison
+            elif mode == 4:
+                print("You choose, DIVISION!".center(45))
+                while True:
+                    try:
+                        # Enter first number
+                        first = int(input("Enter the first number: "))
+                        # Enter second number
+                        second = int(input("Enter the second number: "))
+                        quotient = first / second
+                        # print result
+                        print(f'The quotient is {quotient}')
+                    # If user input 0 in second number
+                    except ZeroDivisionError:
+                        print("ERROR! Divided by zero")
+                        continue
+            else:
+                print("Invalid choice")
+                continue
 # start
 calculator()
 # Ask the user to continue or stop the program
