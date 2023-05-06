@@ -1,5 +1,4 @@
 # import pyfiglet to change font color and style
-
 import pyfiglet
 
 # Display Operation Menu
@@ -16,7 +15,7 @@ def calculator():
             mode = int(input("Enter Operation: ")) 
             # Press 1 for addition
             if mode == 1:
-                print("You choose, ADDITION!".center(45))
+                print("You choose, \033[31mADDITION\033[0m!".center(45))
                 while True:
                     try:
                         # Enter number
@@ -25,16 +24,19 @@ def calculator():
                         second = int(input("Enter the second number: "))
                         sum = first + second
                         # print result
-                        print(f'The sum is {sum}')
+                        print(f'\033[42mThe sum is {sum}\033[0m')
+                        print()
                         choice()
                     # If user input non-integer character
                     except ValueError:
-                        print("ERROR!, you entered invalid character!")
+                        print()
+                        print("\033[31mERROR!, you entered invalid character!\033[0m")
+                        print()
                         continue
                     
             # Press 2 for subtraction
             elif mode == 2:
-                print("You choose, SUBTRACTION!".center(45))
+                print("You choose, \033[32mSUBTRACTION\033[0m!".center(45))
                 while True:
                     try:
                         # Enter number
@@ -43,16 +45,19 @@ def calculator():
                         second = int(input("Enter the second number: "))
                         difference = first - second
                         # print result
-                        print(f'The difference is {difference}')
+                        print(f'\033[42mThe difference is {difference}\033[0m')
+                        print()
                         choice()
                     # If user input non-integer character
                     except ValueError:
-                        print("ERROR!, you entered invalid character!")
+                        print()
+                        print("\033[31mERROR!, you entered invalid character!\033[0m")
+                        print()
                         continue
 
             # Press 3 for multiplication
             elif mode == 3:
-                print("You choose, MULTIPLICATION!".center(45))
+                print("You choose, \033[33mMULTIPLICATION\033[0m!".center(45))
                 while True:
                     try:
                 # Enter number
@@ -61,16 +66,19 @@ def calculator():
                         second = int(input("Enter the second number: "))
                         product = first * second
                         # print result
-                        print(f'The product is {product}')
+                        print(f'\033[42mThe product is {product}\033[0m')
+                        print()
                         choice()
                     # If user non-integer character
                     except ValueError:
-                        print("ERROR!, you entered invalid character!")
+                        print()
+                        print("\033[31mERROR!, you entered invalid character!\033[0m")
+                        print()
                         continue
 
             # Press 4 for divison
             elif mode == 4:
-                print("You choose, DIVISION!".center(45))
+                print("You choose, \033[34mDIVISION\033[0m!".center(45))
                 while True:
                     try:
                         # Enter first number
@@ -79,23 +87,32 @@ def calculator():
                         second = int(input("Enter the second number: "))
                         quotient = first / second
                         # print result
-                        print(f'The quotient is {quotient}')
+                        print(f'\033[42mThe quotient is {quotient}\033[0m')
+                        print()
                         choice()
                     # If user input 0 in second number
                     except ZeroDivisionError:
-                        print("ERROR! Divided by zero")
+                        print()
+                        print("\033[31mERROR! Divided by zero\033[0m")
+                        print()
                         continue
                     # If user non-integer character
                     except ValueError:
-                        print("ERROR!, you entered invalid character!")
+                        print()
+                        print("\033[31mERROR!, you entered invalid character!\033[0m")
+                        print()
                         continue
             else:
-                print("Invalid choice")
+                print()
+                print("\033[31mInvalid choice\033[0m")
+                print()
                 continue
         except ValueError:
-                print("ERROR!, you entered invalid character!")
-                continue
-        
+            print()
+            print("\033[31mERROR!, you entered invalid character!\033[0m")
+            print()
+            continue
+
 # Ask the user to continue or stop the program
 def choice():
     while True:
@@ -111,7 +128,8 @@ def choice():
             calculator()
         # If invalid character
         else:
-            print("Invalid character!")
+            print("\033[31mInvalid character!\033[0m")
+            print()
             continue
 
 # start
