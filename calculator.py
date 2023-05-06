@@ -25,6 +25,7 @@ def calculator():
                         sum = first + second
                         # print result
                         print(f'The sum is {sum}')
+                        choice()
                     # If user input non-integer character
                     except ValueError:
                         print("ERROR!, you entered invalid character!")
@@ -42,6 +43,7 @@ def calculator():
                         difference = first - second
                         # print result
                         print(f'The difference is {difference}')
+                        choice()
                     # If user input non-integer character
                     except ValueError:
                         print("ERROR!, you entered invalid character!")
@@ -59,6 +61,7 @@ def calculator():
                         product = first * second
                         # print result
                         print(f'The product is {product}')
+                        choice()
                     # If user non-integer character
                     except ValueError:
                         print("ERROR!, you entered invalid character!")
@@ -76,6 +79,7 @@ def calculator():
                         quotient = first / second
                         # print result
                         print(f'The quotient is {quotient}')
+                        choice()
                     # If user input 0 in second number
                     except ZeroDivisionError:
                         print("ERROR! Divided by zero")
@@ -89,8 +93,12 @@ def calculator():
                 continue
 # start
 calculator()
+
 # Ask the user to continue or stop the program
-# If n
+def choice():
+    while True:
+        choose = input("Type \033[32mY\033[0m if yes or \033[31mN\033[0m if no: ")
+    # If n
     # Stop the program
 # if y
     # Back to the first part
