@@ -19,9 +19,9 @@ def calculator():
                 while True:
                     try:
                         # Enter number
-                        first = int(input("Enter the first number: "))
+                        first = float(input("Enter the first number: "))
                         # Enter second number
-                        second = int(input("Enter the second number: "))
+                        second = float(input("Enter the second number: "))
                         sum = first + second
                         # print result
                         print(f'\033[42mThe sum is {sum}\033[0m \n')
@@ -38,9 +38,9 @@ def calculator():
                 while True:
                     try:
                         # Enter number
-                        first = int(input("Enter the first number: "))
+                        first = float(input("Enter the first number: "))
                         # Enter second number
-                        second = int(input("Enter the second number: "))
+                        second = float(input("Enter the second number: "))
                         difference = first - second
                         # print result
                         print(f'\033[42mThe difference is {difference}\033[0m \n')
@@ -57,9 +57,9 @@ def calculator():
                 while True:
                     try:
                 # Enter number
-                        first = int(input("Enter the first number: "))
+                        first = float(input("Enter the first number: "))
                         # Enter second number
-                        second = int(input("Enter the second number: "))
+                        second = float(input("Enter the second number: "))
                         product = first * second
                         # print result
                         print(f'\033[42mThe product is {product}\033[0m \n')
@@ -76,9 +76,9 @@ def calculator():
                 while True:
                     try:
                         # Enter first number
-                        first = int(input("Enter the first number: "))
+                        first = float(input("Enter the first number: "))
                         # Enter second number
-                        second = int(input("Enter the second number: "))
+                        second = float(input("Enter the second number: "))
                         quotient = first / second
                         # print result
                         print(f'\033[42mThe quotient is {quotient}\033[0m \n')
