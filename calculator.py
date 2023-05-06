@@ -120,14 +120,16 @@ def choice():
         # If n
         if choose.lower() == 'n':
             # Stop the program
-            print("Closing Program. Thank you! \U0001F64B")
+            print("Closing Program... Thank you! \U0001F64B")
             quit()
         # If y
         elif choose.lower() == 'y':
             # Back to the first part
             calculator()
+            print()
         # If invalid character
         else:
+            print()
             print("\033[31mInvalid character!\033[0m")
             print()
             continue
