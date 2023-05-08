@@ -25,7 +25,7 @@ def calculator():
                         sum = first + second
                         # print result
                         print(f'\033[42mThe sum is {sum}\033[0m \n')
-                        choice()
+                        return
                     # If user input non-integer character
                     except ValueError:
                         print()
@@ -44,7 +44,7 @@ def calculator():
                         difference = first - second
                         # print result
                         print(f'\033[42mThe difference is {difference}\033[0m \n')
-                        choice()
+                        return
                     # If user input non-integer character
                     except ValueError:
                         print()
@@ -63,7 +63,7 @@ def calculator():
                         product = first * second
                         # print result
                         print(f'\033[42mThe product is {product}\033[0m \n')
-                        choice()
+                        return
                     # If user non-integer character
                     except ValueError:
                         print()
@@ -82,7 +82,7 @@ def calculator():
                         quotient = first / second
                         # print result
                         print(f'\033[42mThe quotient is {quotient}\033[0m \n')
-                        choice()
+                        return
                     # If user input 0 in second number
                     except ZeroDivisionError:
                         print()
@@ -102,26 +102,24 @@ def calculator():
             print("\033[31mERROR!, you entered invalid character!\033[0m \n")
             continue
 
-# Ask the user to continue or stop the program
-def choice():
-    while True:
-        choose = input("Type \033[32mY\033[0m if yes or \033[31mN\033[0m if no: ")
-        # If n
-        if choose.lower() == 'n':
-            # Stop the program
-            print("Closing Program... Thank you! \U0001F64B")
-            quit()
-        # If y
-        elif choose.lower() == 'y':
-            # Back to the first part
-            print()
-            calculator()
-        # If invalid character
-        else:
-            print()
-            print("\033[31mInvalid character!\033[0m \n")
-            continue
-
 # start
 calculator()
-choice()
+
+# Ask the user to continue or stop the program
+while True:
+    choose = input("Type \033[32mY\033[0m if yes or \033[31mN\033[0m if no: ")
+    # If n
+    if choose.lower() == 'n':
+        # Stop the program
+        print("Closing Program... Thank you! \U0001F64B")
+        quit()
+    # If y
+    elif choose.lower() == 'y':
+        # Back to the first part
+        print()
+        calculator()
+    # If invalid character
+    else:
+        print()
+        print("\033[31mInvalid character!\033[0m \n")
+        continue
